@@ -1,16 +1,21 @@
 spring:
   application:
     name: ms-client
-
+  security:
+    user:
+      name: root
+      password: 123456
 server:
   port: 8082
 eureka:
   client:
     serviceUrl:
       defaultZone: http://root:123456@ms-discovery1:8771/eureka/,http://root:123456@ms-discovery2:8772/eureka/
-    enabled: true
-    #检索服务中心的服务
+    enabled: false
+    #
     fetch-registry: true
-    #注册到服务中心
-    register-with-eureka: true
+    register-with-eureka: false
+
+
+
 
