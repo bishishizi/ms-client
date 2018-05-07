@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(tags = "测试")
 @RestController
-@RequestMapping("/hello")
+//@RequestMapping("/hello")
 public class HelloController {
 
     @Autowired

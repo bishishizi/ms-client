@@ -5,16 +5,20 @@ spring:
     user:
       name: root
       password: 123456
+#  profiles:
+#    active: dev
+
 server:
   port: 8082
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://root:123456@ms-discovery1:8771/eureka/,http://root:123456@ms-discovery2:8772/eureka/
-    enabled: false
+      #defaultZone: http://root:123456@ms-discovery1:8771/eureka/,http://root:123456@ms-discovery2:8772/eureka/
+      defaultZone: http://root:123456@localhost:8761/eureka/
+    enabled: true
     #
     fetch-registry: true
-    register-with-eureka: false
+    register-with-eureka: true
 ---
 spring:
   profiles: dev
