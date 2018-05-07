@@ -15,7 +15,12 @@ eureka:
     #
     fetch-registry: true
     register-with-eureka: false
-
-
-
-
+---
+spring:
+  profiles: dev
+---
+spring:
+  profiles: test
+---
+spring:
+  profiles: pro
