@@ -22,6 +22,16 @@ eureka:
 ---
 spring:
   profiles: dev
+
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://root:123456@ms-discovery1:8771/eureka/,http://root:123456@ms-discovery2:8772/eureka/
+      defaultZone: http://root:123456@ms-discovery-dev:8761/eureka/
+    enabled: true
+    #
+    fetch-registry: true
+    register-with-eureka: true
 ---
 spring:
   profiles: test
