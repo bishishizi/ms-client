@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: ms-client
+  security:
+    user:
+      name: root
+      password: 123456
+  profiles:
+    active: dev
+#  elasticsearch:
+#    jest:
+#      uris: http://47.104.20.80:9200
+#      username: elastic
+#      password: elseach
+#      read-timeout: 5s
+#      connection-timeout: 5s
+
+#  集群
+  data:
+      elasticsearch:
+        # 集群名
+        cluster-name: elasticsearch
+        # 连接节点,注意在集群中通信都是9300端口，否则会报错无法连接上！
+        cluster-nodes: 47.104.20.80:9300
+        # 是否本地连接
+        local: false
+        repositories:
+          # 仓库中数据存储
+          enabled: true
+
+
+server:
+  port: 8082
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://root:123456@ms-discovery1:8771/eureka/,http://root:123456@ms-discovery2:8772/eureka/
+      defaultZone: http://root:123456@ms-discovery:8761/eureka/,http://root:123456@ms-discovery2:8762/eureka/
+    enabled: false
+    fetch-registry: true
+    register-with-eureka: true
+---
+spring:
+  profiles: dev
+---
+spring:
+  profiles: test
+---
+spring:
+  profiles: pro

@@ -1,29 +1,5 @@
-spring:
-  application:
-    name: ms-client
-  security:
-    user:
-      name: root
-      password: 123456
-  profiles:
-    active: dev
-
-server:
-  port: 8082
-eureka:
-  client:
-    serviceUrl:
-      #defaultZone: http://root:123456@ms-discovery1:8771/eureka/,http://root:123456@ms-discovery2:8772/eureka/
-      defaultZone: http://root:123456@ms-discovery:8761/eureka/,http://root:123456@ms-discovery2:8762/eureka/
-    enabled: true
-    fetch-registry: true
-    register-with-eureka: true
----
-spring:
-  profiles: dev
----
-spring:
-  profiles: test
----
-spring:
-  profiles: pro
+es:
+  name: elastic
+  pwd: elsearch
+  host: 47.104.20.80
+  port: 9300
