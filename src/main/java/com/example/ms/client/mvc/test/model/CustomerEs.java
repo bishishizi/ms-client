@@ -9,7 +9,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
  * @date 2018/5/14 11:23
  */
 
-@Document(indexName = "es-customer" ,type = "customer" ,shards = 2 ,replicas = 1 ,refreshInterval = "-1")
+@Document(indexName = "es-customer" ,type = "customer" ,shards = 2 ,replicas = 1 ,refreshInterval = "-1" )
 @Data
 public class CustomerEs {
 

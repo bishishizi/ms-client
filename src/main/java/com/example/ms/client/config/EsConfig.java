@@ -52,7 +52,7 @@ public class EsConfig {
                                 .put("xpack.security.transport.ssl.enabled", false)
                                 .put("xpack.security.user",name+":"+ pwd)
                                 .build())
-//                        地址配置
+//                        主机地址和端口配置
                             .addTransportAddress(
                                     new InetSocketTransportAddress(
                                             InetAddress.getByName(host)

@@ -1,7 +1,9 @@
 package com.example.ms.client.mvc.test.controller;
 
 import com.example.ms.client.mvc.test.model.CustomerEs;
+import com.example.ms.client.mvc.test.model.Index;
 import com.example.ms.client.mvc.test.service.EsService;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +23,23 @@ public class EsController {
     @Autowired
     EsService esService;
 
-    @ApiOperation("新增")
+    /**
+     * 新增数据
+     * @param customerEs
+     * @return
+     */
+    @ApiOperation("新增数据")
     @PostMapping("saveCustomer")
     public CustomerEs saveCustomer(CustomerEs customerEs) {
 
         return esService.saveCustomer(customerEs);
+    }
+
+    @ApiOperation("新建索引")
+    @PostMapping("saveIndex")
+    public Boolean saveIndex(Index index) {
+
+        return esService.saveIndex(index);
     }
 
     /**
@@ -33,7 +47,6 @@ public class EsController {
      *
      * @return
      */
-
     @ApiOperation("查询所有")
     @PostMapping("fetchAllCustomers")
     public List<CustomerEs> fetchAllCustomers() {
