@@ -1,12 +1,17 @@
 package com.example.ms.client.config;
 
+import org.springframework.stereotype.Component;
+
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * 自定义线程池
+ *
  * @author wangwenchang
  * @date 2018/5/10 15:11
  */
+@Component
 public class CustomThreadPoolExecutor {
     private ThreadPoolExecutor pool = null;
 
@@ -24,7 +29,7 @@ public class CustomThreadPoolExecutor {
      *                          即当提交第41个任务时(前面线程都没有执行完,此测试方法中用sleep(100)),
      *                                任务会交给RejectedExecutionHandler来处理
      */
-    public void init() {
+    public  void init() {
         pool = new ThreadPoolExecutor(
                 10,
                 30,
@@ -44,6 +49,10 @@ public class CustomThreadPoolExecutor {
 
 
     public ExecutorService getCustomThreadPoolExecutor() {
+        if (this.pool == null){
+            init();
+        }
+
         return this.pool;
     }
 

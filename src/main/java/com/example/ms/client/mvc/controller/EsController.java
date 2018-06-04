@@ -1,9 +1,8 @@
-package com.example.ms.client.mvc.test.controller;
+package com.example.ms.client.mvc.controller;
 
-import com.example.ms.client.mvc.test.model.CustomerEs;
-import com.example.ms.client.mvc.test.model.Index;
-import com.example.ms.client.mvc.test.service.EsService;
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import com.example.ms.client.mvc.model.CustomerEs;
+import com.example.ms.client.mvc.model.Index;
+import com.example.ms.client.mvc.service.EsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

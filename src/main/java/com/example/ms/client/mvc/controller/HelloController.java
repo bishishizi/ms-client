@@ -1,7 +1,7 @@
-package com.example.ms.client.mvc.test.controller;
+package com.example.ms.client.mvc.controller;
 
-import com.example.ms.client.mvc.test.model.User;
-import com.example.ms.client.mvc.test.service.HelloService;
+import com.example.ms.client.mvc.model.User;
+import com.example.ms.client.mvc.service.HelloService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(tags = "测试")
 @RestController
-//@RequestMapping("/hello")
+@RequestMapping("/hello")
 public class HelloController {
 
     @Autowired

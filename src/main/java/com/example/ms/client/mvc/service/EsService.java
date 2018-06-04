@@ -1,11 +1,10 @@
-package com.example.ms.client.mvc.test.service;
+package com.example.ms.client.mvc.service;
 
 import com.alibaba.fastjson.JSON;
-import com.example.ms.client.mvc.test.model.CustomerEs;
-import com.example.ms.client.mvc.test.model.CustomerEsRepostiry;
-import com.example.ms.client.mvc.test.model.Index;
+import com.example.ms.client.mvc.model.CustomerEsRepostiry;
+import com.example.ms.client.mvc.model.Index;
+import com.example.ms.client.mvc.model.CustomerEs;
 import com.google.common.collect.Lists;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.stereotype.Service;

@@ -16,6 +16,8 @@ import java.util.function.Predicate;
 
 
 /**
+ * swagger配置
+ *
  * @author wangwenchang
  * @date 2018/5/3 15:13
  */
