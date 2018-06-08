@@ -41,19 +41,18 @@ public class ThreadController {
     public void daemon() {
         LogUtil.info("系统当前时间：" + new Date());
 
-//        TaskVO taskVO = new TaskVO();
-//        Thread thread = new Thread(taskVO);
-//        thread.setDaemon(true);
-//        thread.start();
-
-
         Calendar calendar = Calendar.getInstance();
         //这个时间点执行任务
-        calendar.add(Calendar.SECOND, 10);
+        calendar.add(Calendar.SECOND, 2);
         Date date = calendar.getTime();
         TaskVO task = new TaskVO();
-        Timer timer = new Timer(true);
-        //10之后第一次执行,每隔2秒执行一次
-        timer.schedule(task, date, 2000);
+//        非守护线程,会一直运行
+        Timer timer = new Timer();
+//        守护线程,没有用户线程活跃就会停止
+//        Timer timer = new Timer(true);
+//        2秒之后执行,如果没有活跃线程,守护线程就会停止,不会执行线程方法
+        timer.schedule(task, date);
+        //2秒之后第一次执行,每隔2秒执行一次
+//        timer.schedule(task, date, 2000);
     }
 }
