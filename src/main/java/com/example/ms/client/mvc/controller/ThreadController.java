@@ -2,6 +2,7 @@ package com.example.ms.client.mvc.controller;
 
 import com.example.ms.client.config.CustomThreadPoolExecutor;
 import com.example.ms.client.mvc.model.vo.TaskVO;
+import com.example.ms.client.util.LogUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,8 +39,14 @@ public class ThreadController {
     @ApiOperation("线程")
     @GetMapping("/daemon")
     public void daemon() {
+        LogUtil.info("系统当前时间：" + new Date());
 
-        System.out.println("系统当前时间：" + new Date());
+//        TaskVO taskVO = new TaskVO();
+//        Thread thread = new Thread(taskVO);
+//        thread.setDaemon(true);
+//        thread.start();
+
+
         Calendar calendar = Calendar.getInstance();
         //这个时间点执行任务
         calendar.add(Calendar.SECOND, 10);
