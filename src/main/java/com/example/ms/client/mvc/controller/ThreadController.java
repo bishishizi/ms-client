@@ -46,21 +46,7 @@ public class ThreadController {
         Date date = calendar.getTime();
         TaskVO task = new TaskVO();
         Timer timer = new Timer(true);
-//        timer.schedule(task, date);
         //10之后第一次执行,每隔2秒执行一次
         timer.schedule(task, date, 2000);
-
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        System.out.println("系统当前时间：" + new Date());
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.SECOND, 10);
-        Date date = calendar.getTime();
-        TaskVO task = new TaskVO();
-        Timer timer = new Timer(true);
-//        timer.schedule(task, date);
-        timer.schedule(task, date, 2);
     }
 }

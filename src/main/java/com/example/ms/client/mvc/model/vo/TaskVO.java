@@ -1,5 +1,7 @@
 package com.example.ms.client.mvc.model.vo;
 
+import com.example.ms.client.util.LogUtil;
+
 import java.util.Date;
 import java.util.TimerTask;
 
@@ -11,9 +13,6 @@ public class TaskVO extends TimerTask {
 
     @Override
     public void run() {
-
-        System.out.println(" time : " + new Date());
-
-
+        LogUtil.info("执行时间 : " + new Date());
     }
 }
