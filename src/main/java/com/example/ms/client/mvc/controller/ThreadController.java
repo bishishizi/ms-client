@@ -47,12 +47,12 @@ public class ThreadController {
         Date date = calendar.getTime();
         TaskVO task = new TaskVO();
 //        非守护线程,会一直运行
-        Timer timer = new Timer();
+//        Timer timer = new Timer();
 //        守护线程,没有用户线程活跃就会停止
-//        Timer timer = new Timer(true);
+        Timer timer = new Timer(true);
 //        2秒之后执行,如果没有活跃线程,守护线程就会停止,不会执行线程方法
-        timer.schedule(task, date);
+//        timer.schedule(task, date);
         //2秒之后第一次执行,每隔2秒执行一次
-//        timer.schedule(task, date, 2000);
+        timer.schedule(task, date, 2000);
     }
 }
