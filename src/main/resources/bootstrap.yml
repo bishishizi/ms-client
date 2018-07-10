@@ -7,19 +7,19 @@ spring:
       password: 123456
   profiles:
     active: dev
-#  elasticsearch:
-#    jest:
-#      uris: http://47.104.20.80:9200
+  elasticsearch:
+    jest:
+      uris: http://47.104.20.80:9200
 #      username: elastic
 #      password: elseach
-#      read-timeout: 5s
-#      connection-timeout: 5s
+      read-timeout: 5s
+      connection-timeout: 5s
 
 #  集群
   data:
       elasticsearch:
         # 集群名
-        cluster-name: elasticsearch
+        cluster-name: es_cluster
         # 连接节点,注意在集群中通信都是9300端口，否则会报错无法连接上！
         cluster-nodes: 47.104.20.80:9300
         # 是否本地连接
@@ -30,7 +30,7 @@ spring:
 
 
 server:
-  port: 8082
+  port: 8083
 eureka:
   client:
     serviceUrl:
