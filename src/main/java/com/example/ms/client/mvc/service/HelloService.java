@@ -1,4 +1,4 @@
-package com.example.ms.client.mvc.test.service;
+package com.example.ms.client.mvc.service;
 
 import org.springframework.stereotype.Service;
 
