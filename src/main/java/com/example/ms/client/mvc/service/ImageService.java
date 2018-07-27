@@ -13,6 +13,6 @@ import java.io.IOException;
 public class ImageService {
 
     public static void main(String[] args) throws IOException {
-        Thumbnails.of("D:\\image\\2.jpg").size(800, 470).outputQuality(1f).toFile("D:\\image\\compress.jpg");
+        Thumbnails.of("D:\\image\\6p.jpg").size(1000, 630).outputQuality(1f).toFile("D:\\image\\6.jpg");
     }
 }
