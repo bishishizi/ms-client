@@ -26,7 +26,7 @@ public class HelloController {
     public String hello(){
         User user = new User();
         helloService.hello();
-        System.out.println("hello");
-        return "hello";
+        System.out.println("你");
+        return "你好";
     }
 }
