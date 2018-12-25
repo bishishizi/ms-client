@@ -1,4 +1,4 @@
-package com.example.ms.client.mvc.test.model;
+package com.example.ms.client.mvc.model;
 
 import lombok.Data;
 
